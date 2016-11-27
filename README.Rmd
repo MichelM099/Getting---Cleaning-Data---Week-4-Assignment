@@ -1,0 +1,58 @@
+---
+title: "README.Rmd"
+output: github_document
+---
+
+The source code run_analysis.R goes through a series of 5 specific steps to finally produce a tidy date set. The steps are as follows :
+
+1.      Download the original data in ZIP format and unzip in the current selected directory
+2.      Use read.table to read-in all the different files
+3.      Merge the different datasets to create one big dataset
+4.      Assign the descriptive columns names and replace the features with the descriptive terms
+5       With the extracted variables that contain the text 'mean' or 'std' calculate the mean of
+        each variable. A total of 77 variables are calculated including those that had the word 
+        meanFreq.
+        
+        
+The variables produced are the following:
+
+The 79 variables in the tidy data set are given below with their associated meaning thereafter. 
+
+subjectid                    act_desc                     tBodyAccmeanX               
+tBodyAccmeanY                tBodyAccmeanZ                tBodyAccstdX                
+tBodyAccstdY                 tBodyAccstdZ                 tGravityAccmeanX            
+tGravityAccmeanY             tGravityAccmeanZ             tGravityAccstdX             
+tGravityAccstdY              tGravityAccstdZ              tBodyAccJerkmeanX           
+tBodyAccJerkmeanY            tBodyAccJerkmeanZ            tBodyAccJerkstdX            
+tBodyAccJerkstdY             tBodyAccJerkstdZ             tBodyGyromeanX              
+tBodyGyromeanY               tBodyGyromeanZ               tBodyGyrostdX               
+tBodyGyrostdY                tBodyGyrostdZ                tBodyGyroJerkmeanX          
+tBodyGyroJerkmeanY           tBodyGyroJerkmeanZ           tBodyGyroJerkstdX           
+tBodyGyroJerkstdY            tBodyGyroJerkstdZ            tBodyAccMagmean             
+tBodyAccMagstd               tGravityAccMagmean           tGravityAccMagstd           
+tBodyAccJerkMagmean          tBodyAccJerkMagstd           tBodyGyroMagmean            
+tBodyGyroMagstd              tBodyGyroJerkMagmean         tBodyGyroJerkMagstd         
+fBodyAccmeanX                fBodyAccmeanY                fBodyAccmeanZ               
+fBodyAccstdX                 fBodyAccstdY                 fBodyAccstdZ                
+fBodyAccmeanFreqX            fBodyAccmeanFreqY            fBodyAccmeanFreqZ           
+fBodyAccJerkmeanX            fBodyAccJerkmeanY            fBodyAccJerkmeanZ           
+fBodyAccJerkstdX             fBodyAccJerkstdY             fBodyAccJerkstdZ            
+fBodyAccJerkmeanFreqX        fBodyAccJerkmeanFreq"        fBodyAccJerkmeanFreqZ       
+fBodyGyromeanX               fBodyGyromeanY               fBodyGyromeanZ              
+fBodyGyrostdX                fBodyGyrostdY                fBodyGyrostdZ               
+fBodyGyromeanFreqX           fBodyGyromeanFreqY           fBodyGyromeanFreqZ          
+fBodyAccMagmean              fBodyAccMagstd               fBodyAccMagmeanFreq         
+fBodyBodyAccJerkMagmean      fBodyBodyAccJerkMagstd       fBodyBodyAccJerkMagmeanFreq 
+fBodyBodyGyroMagmean         fBodyBodyGyroMagstd          fBodyBodyGyroMagmeanFreq    
+fBodyBodyGyroJerkMagmean     fBodyBodyGyroJerkMagstd      fBodyBodyGyroJerkMagmeanFreq
+
+Description of abbreviations of measurements
+
+leading t or f is based on time or frequency measurements.
+Body = related to body movement.
+Gravity = acceleration of gravity
+Acc = accelerometer measurement
+Gyro = gyroscopic measurements
+Jerk = sudden movement acceleration
+Mag = magnitude of movement
+mean and SD are calculated for each subject for each activity for each mean and SD measurements.

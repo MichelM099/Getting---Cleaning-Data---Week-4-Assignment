@@ -1,0 +1,77 @@
+This is the source code book for the week 4 assignment from the John Hopkins Bloomberg School entitled Getting and Cleaning Data. This source code book provides the information for the variables that make-up the final point of the assignment which is to produce a dataset following the general rules used in tidy data. The key reference to understanding the concepts behind tidy data can be found at the following site : http://vita.had.co.nz/papers/tidy-data.pdf.
+
+Basically tidy data is based on 3 principles:
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+The most common problems encoutered in dataset, once again from the articled referenced above are the following :
+
+1.      Column headers are values, not variable names.
+2.      Multiple variables are stored in one column.
+3.      Variables are stored in both rows and columns.
+4.      Multiple types of observational units are stored in the same table. 
+5.      A single observational unit is stored in multiple tables.
+
+
+## The Project Description
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+
+# Variables in the tidy data set and their meaning
+
+Description of abbreviations of measurements
+
+leading t or f is based on time or frequency measurements.
+Body = related to body movement.
+Gravity = acceleration of gravity
+Acc = accelerometer measurement
+Gyro = gyroscopic measurements
+Jerk = sudden movement acceleration
+Mag = magnitude of movement
+mean and SD are calculated for each subject for each activity for each mean and SD measurements.
+
+The 79 variables in the tidy data set 
+
+subjectid                    act_desc                     tBodyAccmeanX               
+tBodyAccmeanY                tBodyAccmeanZ                tBodyAccstdX                
+tBodyAccstdY                 tBodyAccstdZ                 tGravityAccmeanX            
+tGravityAccmeanY             tGravityAccmeanZ             tGravityAccstdX             
+tGravityAccstdY              tGravityAccstdZ              tBodyAccJerkmeanX           
+tBodyAccJerkmeanY            tBodyAccJerkmeanZ            tBodyAccJerkstdX            
+tBodyAccJerkstdY             tBodyAccJerkstdZ             tBodyGyromeanX              
+tBodyGyromeanY               tBodyGyromeanZ               tBodyGyrostdX               
+tBodyGyrostdY                tBodyGyrostdZ                tBodyGyroJerkmeanX          
+tBodyGyroJerkmeanY           tBodyGyroJerkmeanZ           tBodyGyroJerkstdX           
+tBodyGyroJerkstdY            tBodyGyroJerkstdZ            tBodyAccMagmean             
+tBodyAccMagstd               tGravityAccMagmean           tGravityAccMagstd           
+tBodyAccJerkMagmean          tBodyAccJerkMagstd           tBodyGyroMagmean            
+tBodyGyroMagstd              tBodyGyroJerkMagmean         tBodyGyroJerkMagstd         
+fBodyAccmeanX                fBodyAccmeanY                fBodyAccmeanZ               
+fBodyAccstdX                 fBodyAccstdY                 fBodyAccstdZ                
+fBodyAccmeanFreqX            fBodyAccmeanFreqY            fBodyAccmeanFreqZ           
+fBodyAccJerkmeanX            fBodyAccJerkmeanY            fBodyAccJerkmeanZ           
+fBodyAccJerkstdX             fBodyAccJerkstdY             fBodyAccJerkstdZ            
+fBodyAccJerkmeanFreqX        fBodyAccJerkmeanFreq"        fBodyAccJerkmeanFreqZ       
+fBodyGyromeanX               fBodyGyromeanY               fBodyGyromeanZ              
+fBodyGyrostdX                fBodyGyrostdY                fBodyGyrostdZ               
+fBodyGyromeanFreqX           fBodyGyromeanFreqY           fBodyGyromeanFreqZ          
+fBodyAccMagmean              fBodyAccMagstd               fBodyAccMagmeanFreq         
+fBodyBodyAccJerkMagmean      fBodyBodyAccJerkMagstd       fBodyBodyAccJerkMagmeanFreq 
+fBodyBodyGyroMagmean         fBodyBodyGyroMagstd          fBodyBodyGyroMagmeanFreq    
+fBodyBodyGyroJerkMagmean     fBodyBodyGyroJerkMagstd      fBodyBodyGyroJerkMagmeanFreq
+
+The variables that makeup the act_desc variables can take on the following values
+
+WALKING (value 1): subject was walking during the test
+WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+SITTING (value 4): subject was sitting during the test
+STANDING (value 5): subject was standing during the test
+LAYING (value 6): subject was laying down during the test
+
+The variable subjectid is the id of one of 30 different subjects that conducted the experiments.
